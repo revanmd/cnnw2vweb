@@ -1,0 +1,91 @@
+{% extends 'admin/layout.html' %}
+
+
+{% block content %}
+
+<div>
+  <a href="{{prev_url}}" style="text-decoration: none">
+    <button class="btn btn-secondary btn-sm mb-3">
+      prev
+    </button>
+  </a>
+  <a href="{{next_url}}" style="text-decoration: none">
+    <button class="btn btn-secondary btn-sm mb-3">
+      next
+    </button>
+  </a>
+</div>
+
+<div class="card mb-3">
+  <div class="card-body mb-2">
+    <h4 class="card-title">Dataset {{d['label']}}</h4>
+    <div class="row">
+      <div class="col-lg-7">
+        <p class="card-description">
+          Informasi dataset
+        </p>
+        <p>
+          Dataset {{d['label']}} merupakan data yang diperoleh dengan melakukan prapengolahan {{d['preprocess']}}. Dataset ini memiliki dua atribut yaitu ulasan dan review. Ulasan merupakan informasi yang diberikan oleh pengguna Lazada yang memiliki makna komentar atau pujian terhadap suatu produk pada website Lazada. Sedangkan rating merupakan hasil pengelompokan bintang berupa label negatif 0 dan label positif 1.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <div>
+          <p class="card-description">Preprocessing Step</p>
+          <div>
+            {% if d['preprocess_id']|int == 1 %}
+              <div class="progress" style="height: 30px;">
+                <div class="progress-bar" role="progressbar" style="width: 33%">Normalisasi</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 33%">Stopword Removal</div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 34%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Stemming</div>
+              </div>
+            {% endif %}
+            {% if d['preprocess_id']|int == 2 %}
+              <div class="progress" style="height: 30px;">
+                <div class="progress-bar" role="progressbar" style="width: 50%">Normalisasi</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 50%">Stopword Removal</div>
+              </div>
+            {% endif %}
+            {% if d['preprocess_id']|int == 3 %}
+              <div class="progress" style="height: 30px;">
+                <div class="progress-bar" role="progressbar" style="width: 100%">Normalisasi</div>
+              </div>
+            {% endif %}
+            {% if d['preprocess_id']|int == 4 %}
+              <div class="progress" style="height: 30px;">
+                <div class="progress-bar" role="progressbar" style="width: 50%">Normalisasi</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 50%">Stemming</div>
+              </div>
+            {% endif %}
+            {% if d['preprocess_id']|int == 5 %}
+              <div class="progress" style="height: 30px;">
+                 <div class="progress-bar" role="progressbar" style="width: 50%">Stopword Removal</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 50%">Stemming</div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                Sampel ulasan
+              </div>
+              <div class="">
+                <div class="container table-responsive">
+                  <div class="table table-stripped">
+                    <table class="table">
+                      {% for item in d['sampel'] %}
+                        <tr>
+                          <td>{{item}}</td>
+                        </tr>
+                      {% endfor %}
+                    </table>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+{% endblock %}

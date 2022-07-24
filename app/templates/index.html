@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CNN W2V Indonesia</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/landing/css/index.style.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="container">
+		<div class="hero">
+			<h1 class="name"><strong>Sentimen Analisis</strong></h1>
+			<span class="job-title">Ulasan Produk</span>
+			<span class="email">Menggunakan metode Convolutional Neural Network dan Word2Vec</span>
+
+			<p class="lead">Penelitian ini menjelaskan hasil implementasi metode <b>Convolutional Neural Network</b> dan<b> Word2Vec</b> untuk klasifikasi sentimen. Data yang dikumpulkan merupakan data primer dengan total lebih dari <b>5 Juta Ulasan</b> yang diambil dari situs e-commerce <b>Lazada</b></p>
+		</div>
+	</div>
+
+<!-- Skills and intrest section -->
+	<div class="container">
+
+		<div class="sections">
+			<h2 class="section-title">Dataset</h2>
+
+			<div class="list-card">
+				<span class="exp">B1</span>
+				<div>
+					<h3>Balanced dataset 1</h3>
+					<span>Normalisasi, Stopword Removal ,Stemming</span>
+				</div>
+			</div>
+			
+			<div class="list-card">
+				<span class="exp">B2</span>
+				<div>
+					<h3>Balanced dataset 2</h3>
+					<span>Normalisasi, Stopword Removal</span>
+				</div>
+			</div>
+
+
+			<div class="list-card">
+				<span class="exp">B3</span>
+				<div>
+					<h3>Balanced dataset 3</h3>
+					<span>Normalisasi</span>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="sections">
+				<h2 class="section-title">Models</h2>
+				
+				<div class="list-card">
+					<div>
+						<h3>Word2Vec</h3>
+						<span>Full Raw</span>
+					</div>
+				</div>	
+
+				<div class="list-card">
+					<div>
+						<h3>Convolutional Neural Network</h3>
+						<span>model_c1.h5, model_c2.h5, model_c3.h5</span>
+					</div>
+				</div>		
+		</div>
+	</div>
+
+	<!-- Achievements -->
+
+	<div class="container cards">
+		
+		<a href="/doc/model/1" style="text-decoration: none">
+			<div class="card">
+				<div class="skill-meta">
+					<h3>Dokumentasi</h3>
+					<span>Informasi dataset, pelatihan dan model CNN W2V</span>
+				</div>
+			</div>
+
+		</a>
+
+		<a href="/doc/demo" style="text-decoration: none">
+			<div class="card">
+				<div class="skill-meta">
+					<h3>Demo</h3>
+					<span>Gunakan secara langsung model CNN W2V yang sudah dilatih</span>
+				</div>
+			</div>
+		</a>
+
+	</div>
+
+	<!-- Timeeline -->
+
+	<div class="container">
+		<ol class="timeline">
+		  <li>
+		    <p class="line">Research Pipeline</p>
+		    <span class="point"></span>
+		    <p class="description">
+		      Crawling dataset
+		    </p>
+		  </li>
+
+		  <li>
+		    <span class="point"></span>
+		    <p class="description">
+		      Preprocessing
+		    </p>
+		  </li>
+
+		  		  <li>
+		    <span class="point"></span>
+		    <p class="description">
+		      Training Word2Vec Model
+		    </p>
+		  </li>
+
+		  		  <li>
+		    <span class="point"></span>
+		    <p class="description">
+		      Training CNN Model
+		    </p>
+		  </li>
+		</ol>
+	</div>
+	<br><br>
+</body>
+</html>

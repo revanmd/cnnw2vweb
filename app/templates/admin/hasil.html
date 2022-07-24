@@ -1,0 +1,108 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+<div class ="card">  
+  <div class="card-body">
+    <h4 class="card-title">Hasil Pengujian</h4>
+    <p class="card-description">Pengujian dilakukan dengan melakukan prediksi pada data uji menggunakan model yang telah dilatih dengan dataset yang telah dikategorikan sesuai dengan skema pra-pengolahan</p>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <th>
+            &nbsp;
+          </th>
+          <th>
+            Presisi
+          </th>
+          <th>
+            Akurasi
+          </th>
+          <th>
+            Recall
+          </th>
+          <th>
+            F1-Score
+          </th>
+          
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>D1</b></td>
+            <td>0.90309</td>
+            <td>0.90978</td>
+            <td>0.89622</td>
+            <td>0.90295</td>
+            
+          </tr>
+          <tr>
+            <td><b>D2</b></td>
+            <td>0.90449</td>
+            <td>0.92652</td>
+            <td>0.87992</td>
+            <td>0.90262</td>
+            
+          </tr>
+          <tr>
+            <td><b>D3</b></td>
+            <td>0.91119</td>
+            <td>0.91123</td>
+            <td>0.91232</td>
+            <td>0.91178</td>
+            
+          </tr>
+          <tr>
+            <td><b>D4</b></td>
+            <td>0.91079</td>
+            <td>0.92001</td>
+            <td>0.90099</td>
+            <td>0.91040</td>
+          </tr>
+          <tr>
+            <td><b>D5</b></td>
+            <td>0.90069</td>
+            <td>0.89710</td>
+            <td>0.90656</td>
+            <td>0.90118</td>
+          </tr>
+          <tr>
+            <td><b>D6</b></td>
+            <td>0.90352</td>
+            <td>0.91096</td>
+            <td>0.89574</td>
+            <td>0.90329</td>
+          </tr>
+          <tr>
+            <td><b>D7</b></td>
+            <td>0.90559</td>
+            <td>0.92245</td>
+            <td>0.88687</td>
+            <td>0.90431</td>
+          </tr>
+          <tr>
+            <td><b>D8</b></td>
+            <td>0.90839</td>
+            <td>0.91305</td>
+            <td>0.90397</td>
+            <td>0.90849</td>
+          </tr>
+           <tr>
+            <td><b>D9</b></td>
+            <td>0.91232</td>
+            <td>0.93482</td>
+            <td>0.88758</td>
+            <td>0.91059</td>
+          </tr>
+           <tr>
+            <td><b>D10</b></td>
+            <td>0.90642</td>
+            <td>0.92236</td>
+            <td>0.88877</td>
+            <td>0.90525</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

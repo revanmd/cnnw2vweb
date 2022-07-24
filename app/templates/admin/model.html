@@ -1,0 +1,52 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+<div>
+	<a href="{{prev_url}}" style="text-decoration: none">
+		<button class="btn btn-secondary btn-sm mb-3">
+			prev
+		</button>
+	</a>
+	<a href="{{next_url}}" style="text-decoration: none">
+		<button class="btn btn-secondary btn-sm mb-3">
+			next
+		</button>
+	</a>
+</div>
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Model {{d['label']}}</h4>
+      <div class="row">
+        <div class="col-lg-5">
+          <img src="{{d['path']}}">
+
+        </div>
+        <div class="col-lg-6">
+          <div class="mt-3">
+            <p class="text-description">
+              Model yang dibangun memperoleh akurasi sebesar <b>{{d['akurasi']}}</b>, presisi sebesar <b>{{d['presisi']}}</b>, recall sebesar <b>{{d['recall']}}</b>, f1 score sebesar <b>{{d['f1score']}}</b>. Pengujian menggunakan 10.000 data testing dengan 5000 data berlabel positif dan 5000 data berlabel negatif. Berikut ini adalah confusion matrix pelatihan model M1:
+            </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <td><b>True Positive</b></td>
+                  <td><b>True Negative</b></td>
+                  <td><b>False Negative</b></td>
+                  <td><b>False Negative</b></td>
+                </tr>
+              </thead>
+              <tr>
+                <td>{{d['tp']}}</td>
+                <td>{{d['tn']}}</td>
+                <td>{{d['fp']}}</td>
+                <td>{{d['fn']}}</td>
+              </tr>
+                
+              </td>
+            </table>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
