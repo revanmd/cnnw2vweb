@@ -17,6 +17,17 @@
     .progress .progress-bar{
       border-radius: 0 !important;
     }
+    @media only screen and (max-width: 600px) {
+      #disnone{
+        display: none !important
+      }
+      .page-body-wrapper{
+        padding-top: 70px !important
+      }
+      .card{
+        overflow: auto
+      }
+    }
   </style>
 </head>
 
@@ -24,17 +35,16 @@
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start" id='disnone'>
         <div class="me-3">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
             <span class="icon-menu"></span>
           </button>
         </div>
-        <div>
-          
-        </div>
       </div>
-      <div class="navbar-menu-wrapper d-flex align-items-top"> 
+      <div class="navbar-menu-wrapper d-flex align-items-top"
+        style="position: relative;left: 5px !important;top:5px" 
+      > 
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
             <h1 class="welcome-text pt-3 mb-1"><span class="text-black fw-bold">CNN-W2V SA</span></h1>
@@ -83,11 +93,17 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/doc/hasil">
-              <i class="menu-icon mdi mdi-floor-plan"></i>
-              Hasil Training
-            </a>
-          </li> 
+              <a class="nav-link" data-bs-toggle="collapse" href="#nav-model" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon mdi mdi-floor-plan"></i>
+                <span class="menu-title">Hasil</span>
+                <i class="menu-arrow"></i> 
+              </a>
+              <div class="collapse" id="nav-model">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="/doc/hasil">Hasil Training</a></li>
+                </ul>
+              </div>
+            </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#nav-model" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi mdi-floor-plan"></i>
@@ -154,7 +170,28 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
+   <!-- plugins:js -->
   <script src="/static/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="/static/vendors/chart.js/Chart.min.js"></script>
+  <script src="/static/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="/static/vendors/progressbar.js/progressbar.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="/static/js/off-canvas.js"></script>
+  <script src="/static/js/hoverable-collapse.js"></script>
+  <script src="/static/js/template.js"></script>
+  <script src="/static/js/settings.js"></script>
+  <script src="/static/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="/static/js/jquery.cookie.js" type="text/javascript"></script>
+  <script src="/static/js/dashboard.js"></script>
+  <script src="/static/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
 </body>
 
 </html>
